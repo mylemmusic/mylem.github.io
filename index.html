@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MYLEM · Presskit</title>
+<meta name="description" content="MYLEM, DJ y productor open format de Sucre, Bolivia. Biografía, escenarios, rider técnico y booking.">
+<meta property="og:title" content="MYLEM · Presskit">
+<meta property="og:description" content="DJ y productor open format de Sucre, Bolivia. Booking: +591 62899065">
+<meta property="og:image" content="media/og.jpg">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="media/icono.png">
+<link rel="apple-touch-icon" href="media/icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: las visuales kinetic corren de fondo fijo, oscurecidas; arriba el logo burbuja monocromático animado y los recortes; los títulos son bloques blancos como en las visuales */
+:root{
+  --ink:#0a0a0a;
+  --veil:rgba(8,8,8,.80);
+  --panel:rgba(18,18,18,.86);
+  --line:rgba(255,255,255,.16);
+  --paper:#f4f4f2;
+  --mute:#a6a6a2;
+  --font-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --font-body:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--ink);color:var(--paper);font-family:var(--font-body);font-size:16px;line-height:1.6;margin:0}
+a{color:var(--paper)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+img{display:block;max-width:100%;height:auto}
+p{margin:0}
+
+/* fondo animado */
+.bg{position:fixed;inset:0;z-index:0;overflow:hidden;background:var(--ink) url("media/fondo-poster.jpg") center/cover}
+.bg video{width:100%;height:100%;object-fit:cover;filter:saturate(.55) contrast(1.05)}
+.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,.55) 0%,var(--veil) 45%,rgba(8,8,8,.9) 100%)}
+.bgtoggle{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;background:var(--panel);color:var(--paper);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.bgtoggle:hover{border-color:var(--paper)}
+
+.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:20px 88px}
+.label{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+
+h2{margin:96px 0 28px;line-height:1}
+h2 span{display:inline-block;background:var(--paper);color:var(--ink);font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(40px,9vw,104px);letter-spacing:-.025em;padding:.06em .16em .02em}
+h3{font-family:var(--font-display);font-weight:800;font-size:18px;margin:0 0 4px;text-transform:uppercase;letter-spacing:-.005em}
+
+nav{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:center;padding-block:6px 18px;border-bottom:1px solid var(--line)}
+nav .links{display:flex;flex-wrap:wrap;gap:6px 18px}
+nav .links a{font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.12em;text-decoration:none;color:var(--mute)}
+nav .links a:hover{color:var(--paper)}
+
+/* hero */
+.hero{display:grid;gap:8px;padding-top:24px}
+.hero picture{display:block;width:min(100%,980px);margin-inline:auto}
+.hero .logo{width:100%;height:auto;filter:drop-shadow(0 14px 40px rgba(0,0,0,.6))}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end}
+.cut{align-self:end;max-height:640px;width:auto;height:auto;margin-inline:auto;filter:grayscale(1) contrast(1.05) drop-shadow(0 20px 50px rgba(0,0,0,.7))}
+.pitch{display:grid;gap:18px;padding-bottom:40px;min-width:0}
+.pitch .big{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(30px,4.6vw,54px);line-height:.95;letter-spacing:-.02em}
+.pitch .big mark{background:var(--paper);color:var(--ink);padding:0 .12em}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{font-family:var(--font-mono);font-size:13px;text-transform:uppercase;letter-spacing:.1em;padding:12px 18px;border-radius:999px;text-decoration:none;border:1px solid var(--paper);background:rgba(0,0,0,.35)}
+.btn.solid{background:var(--paper);color:var(--ink)}
+
+/* bio */
+.bio{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center}
+.bio .txt{display:grid;gap:18px;max-width:62ch;min-width:0}
+.bio .txt p{color:#dcdcd8}
+.bio strong{color:var(--paper)}
+.bio .live{border-radius:4px;overflow:hidden;aspect-ratio:3/4;filter:grayscale(1) contrast(1.1)}
+.bio .live img{width:100%;height:100%;object-fit:cover}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);overflow:hidden}
+.facts div{background:var(--panel);padding:14px;min-width:0}
+.facts b{display:block;font-family:var(--font-display);font-weight:800;font-size:20px;line-height:1.2;text-transform:uppercase}
+
+/* escenarios */
+.fests{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fest{border-top:3px solid var(--paper);padding-top:14px;display:grid;gap:4px}
+.fest b{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(24px,3.2vw,36px);line-height:1;letter-spacing:-.02em}
+.shared{margin-top:44px;display:grid;gap:14px}
+.names{display:flex;flex-wrap:wrap;gap:8px}
+.names span{font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:clamp(18px,2.4vw,26px);line-height:1;padding:.35em .5em;border:1px solid var(--line);background:var(--panel)}
+.names span:nth-child(3n+1){background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:24px 32px}
+
+/* servicios */
+.services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.services article{padding:22px 20px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);min-width:0}
+.services article:first-child{padding-left:0}
+.services article:last-child{border-right:0}
+.services p{color:var(--mute)}
+
+/* rider */
+.rider{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;align-items:start}
+.box{background:var(--panel);border:1px solid var(--line);padding:24px;display:grid;gap:14px;min-width:0;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.gear{list-style:none;margin:0;padding:0;display:grid}
+.gear li{display:grid;grid-template-columns:minmax(110px,30%) 1fr;gap:4px 16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.gear li:last-child{border-bottom:0}
+.gear .k{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding-top:3px}
+.gear .v{font-weight:600}
+.gear .v small{display:block;font-weight:400;color:var(--mute);font-size:14px}
+.or{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:13px;letter-spacing:.06em;background:var(--paper);color:var(--ink);padding:2px 8px;width:fit-content}
+.box p{color:#dcdcd8}
+
+/* contacto */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:end}
+.contact .cut{max-height:560px}
+.rows{display:grid;gap:12px}
+.row{display:flex;gap:10px 12px;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:12px;flex-wrap:wrap}
+.row .v{font-family:var(--font-mono);font-size:14px;overflow-wrap:anywhere;min-width:0;flex:1;text-align:right;text-decoration:none}
+.row a.v:hover{text-decoration:underline}
+.copy{background:none;border:1px solid var(--line);color:var(--mute);font-family:var(--font-mono);font-size:11px;padding:5px 10px;border-radius:999px;cursor:pointer}
+.copy:hover{color:var(--paper);border-color:var(--paper)}
+.box .bigc{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(28px,4vw,44px);line-height:.95;letter-spacing:-.02em}
+
+footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+footer img{height:36px;width:auto}
+
+@media (max-width:760px){
+  .hero-grid,.bio,.contact,.rider,.services,.fests,.duo{grid-template-columns:1fr}
+  .services article,.services article:first-child{padding:18px 0;border-right:0}
+  .cut{max-height:440px}
+  .pitch{padding-bottom:8px}
+  .gear li{grid-template-columns:1fr}
+  h2{margin:72px 0 20px}
+}
+
+/* PDF */
+@page{size:A4;margin:0}
+@media print{
+  html,body{background:var(--ink)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .bg,.bgtoggle,nav .links,.copy{display:none!important}
+  .wrap{padding-block:14mm 10mm;padding-inline:14mm;max-width:none}
+  .box{-webkit-backdrop-filter:none;backdrop-filter:none;background:#141414}
+  .facts div,.names span{background:#141414}
+  .names span:nth-child(3n+1){background:var(--paper)}
+  h2{margin:0 0 20px}
+  h2 span{font-size:64px}
+  section{break-before:page;break-inside:avoid}
+  #servicios{break-before:auto;margin-top:56px}
+  .cut{max-height:440px}
+  .contact .cut{max-height:420px}
+  .bio .live{max-height:420px}
+  .btn{background:transparent}
+}
+</style>
+
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <video id="bgv" src="media/fondo-visuales.mp4" poster="media/fondo-poster.jpg" autoplay muted loop playsinline preload="auto"></video>
+</div>
+<button class="bgtoggle" id="bgtoggle" type="button">Pausar fondo</button>
+
+<div class="wrap">
+  <nav>
+    <span class="label">Presskit 2026 · Sucre, Bolivia</span>
+    <div class="links">
+      <a href="#bio">Bio</a><a href="#escenarios">Escenarios</a><a href="#servicios">Servicios</a><a href="#rider">Rider</a><a href="#contacto">Booking</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <picture>
+      <source srcset="media/logo-blanco.png" media="(prefers-reduced-motion: reduce), print">
+      <img class="logo" src="media/logo-brillo.webp" alt="MYLEM" width="1200" height="415">
+    </picture>
+    <div class="hero-grid">
+      <img class="cut" src="media/manos.webp" alt="MYLEM con la cadena entre las manos" width="1000" height="1170">
+      <div class="pitch">
+        <span class="label">DJ y productor · Open format</span>
+        <p class="big">Del reggaetón al house, <mark>sin bajar</mark> la pista.</p>
+        <div class="cta">
+          <a class="btn solid" href="#contacto">Contratar</a>
+          <a class="btn" href="https://soundcloud.com/mylemmusic">SoundCloud</a>
+          <a class="btn" href="https://open.spotify.com/search/mylem">Spotify</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="bio">
+    <h2><span>Biografía</span></h2>
+    <div class="bio">
+      <div class="txt">
+        <p><strong>MYLEM</strong> es DJ y productor de Sucre, Bolivia, especializado en <strong>open format</strong>: mezcla géneros y épocas para leer cada pista y mantenerla arriba toda la noche.</p>
+        <p>Tocó en festivales como <strong>Holi Music Festival</strong>, <strong>Dream Fest</strong> y <strong>Corona Sunset</strong> en Potosí, y compartió escenario con artistas como Rombai, L-Gante, Migrantes, La T y La M y Joel de León, ex CNCO.</p>
+        <p>En producción trabajó con artistas de Bolivia como <strong>Nahu Baby</strong>, <strong>Huber</strong> y <strong>Red Death Grave</strong>, entre muchos otros, y su música tiene el support de artistas internacionales como <strong>Subtronics</strong> y <strong>DJ Diesel</strong>.</p>
+        <div class="facts">
+          <div><span class="label">Base</span><b>Sucre, BO</b></div>
+          <div><span class="label">Estilo</span><b>Open format</b></div>
+          <div><span class="label">Festivales</span><b>3+</b></div>
+        </div>
+      </div>
+      <div class="live"><img src="media/en-vivo.jpg" alt="MYLEM tocando en vivo"></div>
+    </div>
+  </section>
+
+  <section id="escenarios">
+    <h2><span>Escenarios</span></h2>
+    <div class="fests">
+      <div class="fest"><span class="label">Festival</span><b>Holi Music Festival</b></div>
+      <div class="fest"><span class="label">Festival</span><b>Dream Fest</b></div>
+      <div class="fest"><span class="label">Festival · Potosí</span><b>Corona Sunset</b></div>
+    </div>
+    <div class="shared">
+      <span class="label">Compartió escenario con</span>
+      <div class="names">
+        <span>Rombai</span><span>Diego Ríos</span><span>L-Gante</span><span>Migrantes</span><span>Max Carra</span><span>La T y La M</span><span>Romina Malaespina</span><span>Joel de León</span><span>La Mara Santos</span>
+      </div>
+    </div>
+    <div class="shared duo">
+      <div class="shared" style="margin-top:0">
+        <span class="label">Producción con artistas de Bolivia</span>
+        <div class="names"><span>Nahu Baby</span><span>Huber</span><span>Red Death Grave</span></div>
+      </div>
+      <div class="shared" style="margin-top:0">
+        <span class="label">Support internacional</span>
+        <div class="names"><span>Subtronics</span><span>DJ Diesel</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <h2><span>Servicios</span></h2>
+    <div class="services">
+      <article><h3>Festivales y boliches</h3><p>Sets open format de apertura, horario central o cierre.</p></article>
+      <article><h3>Corporativos y marcas</h3><p>Lanzamientos, activaciones y fiestas de empresa.</p></article>
+      <article><h3>Warm up de artistas</h3><p>Apertura para shows en vivo de artistas invitados.</p></article>
+    </div>
+  </section>
+
+  <section id="rider">
+    <h2><span>Rider técnico</span></h2>
+    <div class="rider">
+      <div class="box">
+        <span class="label">Requerimientos de cabina</span>
+        <ul class="gear">
+          <li><span class="k">Monitores</span><span class="v">1 a 2 monitores de piso para la cabina de DJ</span></li>
+          <li><span class="k">Reproductores</span><span class="v">Pioneer CDJ-2000NXS a CDJ-3000</span></li>
+          <li><span class="k">Mixer</span><span class="v">Pioneer DJM-900NXS</span></li>
+          <li><span class="k">All in one</span><span class="v">Pioneer XDJ-RX2 o XDJ-RX3<small>En lugar de reproductores y mixer</small></span></li>
+          <li><span class="k">Micrófono</span><span class="v">1 micrófono</span></li>
+        </ul>
+      </div>
+      <div class="box">
+        <span class="or">Sin estos equipos</span>
+        <p>Si el lugar no cuenta con ese equipo, se avisa con anticipación o se dispone de una controladora:</p>
+        <ul class="gear">
+          <li><span class="k">Opción 1</span><span class="v">Pioneer DDJ-GRV6</span></li>
+          <li><span class="k">Opción 2</span><span class="v">Pioneer DDJ-1000</span></li>
+          <li><span class="k">Opción 3</span><span class="v">Pioneer DDJ-FLX10</span></li>
+          <li><span class="k">Software</span><span class="v">Rekordbox<small>Con controladora</small></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2><span>Contacto</span></h2>
+    <div class="contact">
+      <img class="cut" src="media/perfil.webp" alt="MYLEM de perfil" width="613" height="1300">
+      <div class="box">
+        <span class="label">Booking y prensa</span>
+        <div class="bigc">Llevá MYLEM a tu evento</div>
+        <div class="rows">
+          <div class="row"><span class="label">WhatsApp</span><a class="v" href="https://wa.me/59162899065">+591 62899065</a><button class="copy" type="button" data-copy="+59162899065">Copiar</button></div>
+          <div class="row"><span class="label">Email</span><a class="v" href="mailto:mylemmusic@gmail.com">mylemmusic@gmail.com</a><button class="copy" type="button" data-copy="mylemmusic@gmail.com">Copiar</button></div>
+          <div class="row"><span class="label">Instagram</span><a class="v" href="https://www.instagram.com/mylemmusic/">@mylemmusic</a></div>
+          <div class="row"><span class="label">TikTok</span><a class="v" href="https://www.tiktok.com/@mylemmusic">@mylemmusic</a></div>
+          <div class="row"><span class="label">SoundCloud</span><a class="v" href="https://soundcloud.com/mylemmusic">soundcloud.com/mylemmusic</a></div>
+          <div class="row"><span class="label">Spotify</span><a class="v" href="https://open.spotify.com/search/mylem">MYLEM</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <img src="media/logo-blanco.png" alt="MYLEM" width="600" height="201">
+    <span class="label">© 2026 · Sucre, Bolivia</span>
+  </footer>
+</div>
+
+<script>
+const v=document.getElementById("bgv"),t=document.getElementById("bgtoggle");
+const still=matchMedia("(prefers-reduced-motion: reduce)").matches;
+v.muted=true;
+function setBtn(){t.textContent=v.paused?"Animar fondo":"Pausar fondo"}
+if(still){v.pause()}else{const p=v.play();if(p&&p.catch)p.catch(()=>{}).finally(setBtn)}
+v.addEventListener("play",setBtn);v.addEventListener("pause",setBtn);setBtn();
+t.addEventListener("click",()=>{v.paused?v.play().catch(()=>{}):v.pause()});
+document.querySelectorAll(".copy").forEach(b=>{
+  b.addEventListener("click",()=>{
+    const val=b.dataset.copy,el=b.parentElement.querySelector(".v");
+    const done=()=>{b.textContent="Copiado";setTimeout(()=>b.textContent="Copiar",1500)};
+    const sel=()=>{const s=getSelection(),rg=document.createRange();rg.selectNodeContents(el);s.removeAllRanges();s.addRange(rg)};
+    try{navigator.clipboard.writeText(val).then(done).catch(sel)}catch(e){sel()}
+  });
+});
+</script>
+</body>
+</html>
