@@ -106,6 +106,18 @@ nav .links a:hover{color:var(--paper)}
 .or{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:13px;letter-spacing:.06em;background:var(--paper);color:var(--ink);padding:2px 8px;width:fit-content}
 .box p{color:#dcdcd8}
 
+.ig{display:block;max-width:560px;text-decoration:none;color:var(--paper);background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:border-color .2s}
+.ig:hover{border-color:var(--paper)}
+.ig-head{display:flex;align-items:center;gap:14px;padding:16px 18px}
+.ig-head img{width:64px;height:64px;border-radius:50%;border:2px solid var(--paper);object-fit:cover;flex:none}
+.ig-who{display:grid;min-width:0;flex:1}
+.ig-who b{font-size:17px}
+.ig-who span{color:var(--mute);font-size:14px}
+.ig-follow{flex:none;background:var(--paper);color:var(--ink);font-weight:800;font-size:14px;padding:8px 14px;border-radius:8px}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.ig-grid img{width:100%;aspect-ratio:1;object-fit:cover}
+.ig-foot{padding:12px 18px;font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+
 /* contacto */
 .contact{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:end}
 .contact .cut{max-height:560px}
@@ -145,6 +157,8 @@ footer img{height:36px;width:auto}
   .cut{max-height:440px}
   .contact .cut{max-height:420px}
   .bio .live{max-height:420px}
+  #instagram{break-before:auto;margin-top:48px}
+  .ig{max-width:420px}
   .btn{background:transparent}
 }
 </style>
@@ -160,7 +174,7 @@ footer img{height:36px;width:auto}
   <nav>
     <span class="label">Presskit 2026 · Sucre, Bolivia</span>
     <div class="links">
-      <a href="#bio">Bio</a><a href="#escenarios">Escenarios</a><a href="#servicios">Servicios</a><a href="#rider">Rider</a><a href="#contacto">Booking</a>
+      <a href="#bio">Bio</a><a href="#escenarios">Escenarios</a><a href="#servicios">Servicios</a><a href="#rider">Rider</a><a href="#instagram">Instagram</a><a href="#contacto">Booking</a>
     </div>
   </nav>
 
@@ -258,6 +272,21 @@ footer img{height:36px;width:auto}
         </ul>
       </div>
     </div>
+  </section>
+
+  <section id="instagram">
+    <h2><span>Instagram</span></h2>
+    <a class="ig" href="https://www.instagram.com/mylemmusic/">
+      <div class="ig-head">
+        <img src="media/icono.png" alt="" width="180" height="180">
+        <div class="ig-who"><b>mylemmusic</b><span>MYLEM · DJ y productor · Sucre, Bolivia</span></div>
+        <span class="ig-follow">Seguir</span>
+      </div>
+      <div class="ig-grid">
+        <img src="media/ig-1.jpg" alt="" width="400" height="400"><img src="media/ig-2.jpg" alt="" width="400" height="400"><img src="media/ig-3.jpg" alt="" width="400" height="400"><img src="media/ig-4.jpg" alt="" width="400" height="400"><img src="media/ig-5.jpg" alt="" width="400" height="400"><img src="media/ig-6.jpg" alt="" width="400" height="400">
+      </div>
+      <div class="ig-foot">Ver perfil en Instagram →</div>
+    </a>
   </section>
 
   <section id="contacto">
